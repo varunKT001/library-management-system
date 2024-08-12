@@ -20,3 +20,5 @@ RUN ./mvnw clean package -DskipTests
 
 # Specify the command to run the app
 CMD ["java", "-jar", "/app/target/lms-0.0.1-SNAPSHOT.jar"]
+
+EXPOSE 8080
