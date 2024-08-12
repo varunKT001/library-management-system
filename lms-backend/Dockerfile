@@ -9,6 +9,9 @@ COPY .mvn/ .mvn/
 COPY mvnw .
 COPY pom.xml .
 
+# Grant execution permission for the Maven wrapper
+RUN chmod +x mvnw
+
 # Copy the source code into the container
 COPY src/ src/
 
