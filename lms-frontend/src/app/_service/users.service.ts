@@ -10,7 +10,7 @@ import { UserAuthService } from './user-auth.service';
 })
 export class UsersService {
 
-  private baseURL = "http://localhost:8080/admin/users";
+  private baseURL = "https://library-management-system-o7m9.onrender.com/admin/users";
   requestHeader = new HttpHeaders(
     { 'No-Auth': 'True' }
   );
@@ -21,7 +21,7 @@ export class UsersService {
   ) { }
 
   public login(loginData: NgForm) {
-    return this.httpClient.post("http://localhost:8080/authenticate", loginData, {
+    return this.httpClient.post("https://library-management-system-o7m9.onrender.com/authenticate", loginData, {
       headers: this.requestHeader,
     });
   }
